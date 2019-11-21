@@ -1,3 +1,6 @@
+
+console.log("Hello World!")
+
 function buildMetadata(sample) {
 
   // @TODO: Complete the following function that builds the metadata panel
