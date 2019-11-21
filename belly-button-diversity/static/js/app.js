@@ -1,6 +1,4 @@
 
-console.log("Hello World!")
-
 function buildMetadata(sample) {
 
   // @TODO: Complete the following function that builds the metadata panel
@@ -35,9 +33,10 @@ function init() {
 
   // Use the list of sample names to populate the select options
   d3.json("/names").then((sampleNames) => {
+    console.log(sampleNames);
     sampleNames.forEach((sample) => {
       selector
-        .append("option")
+        .append("option", sample)
         .text(sample)
         .property("value", sample);
     });
