@@ -1,4 +1,3 @@
-
 function buildMetadata(sample) {
 
   // The following function builds the metadata panel
@@ -16,7 +15,7 @@ function buildMetadata(sample) {
       });
     });
 
-
+  // The following function builds the gauge indicator
     d3.json(metadata_url).then(function(data){
 
       var wash_freq = data.WFREQ;
@@ -26,7 +25,7 @@ function buildMetadata(sample) {
       {
         domain: { x: [0, 1], y: [0, 1] },
         value: wash_freq,
-        title: { text: "Belly Button Scrubs Per Week"},
+        title: { text: "<b>Wash Frequency</b><br><i>Scrubs per week</i>"},
         type: "indicator",
         mode: "gauge+number+range",
         gauge: {
@@ -116,10 +115,6 @@ function buildCharts(sample) {
     Plotly.newPlot('bubble', data, layout);
 
     });
-
-
-
-
 
 }
 
